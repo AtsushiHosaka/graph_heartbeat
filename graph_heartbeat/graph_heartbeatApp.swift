@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct graph_heartbeatApp: App {
+    @StateObject private var viewModel = IPhoneViewModel.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartView()
+                .environmentObject(viewModel)
         }
     }
 }
